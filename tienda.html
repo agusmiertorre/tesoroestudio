@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda · Tesoro Estudio</title>
+<meta name="description" content="Te estamos llevando a la tienda online de Tesoro Estudio.">
+<meta name="theme-color" content="#1e3d32">
+
+<!-- Redirección automática a la tienda (Tienda Nube). -->
+<meta http-equiv="refresh" content="0; url=https://tesoroestudio.mitiendanube.com/">
+<link rel="canonical" href="https://tesoroestudio.mitiendanube.com/">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 30'%3E%3Cg fill='none' stroke='%23bf9b30' stroke-width='1.6' stroke-linejoin='round'%3E%3Cpath d='M12 1 22 9 12 29 2 9Z'/%3E%3Cpath d='M2 9h5L12 1M22 9h-5L12 1M7 9 12 29M17 9 12 29M7 9h10'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{ --bg:#1e3d32; --gold:#bf9b30; --ink:#faf6ef; }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Mulish",system-ui,sans-serif;
+    display:grid; place-items:center; text-align:center; padding:2rem;
+  }
+  .box{max-width:420px}
+  .gem{width:54px;height:auto;margin-bottom:1.4rem;animation:spin 3.4s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){ .gem{animation:none} }
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:1.9rem;margin:0 0 .6rem}
+  p{color:#d4c8b2;margin:0 0 1.6rem;line-height:1.6}
+  a.btn{
+    display:inline-block;background:var(--gold);color:#1c1a16;
+    text-decoration:none;font-weight:800;padding:.85rem 1.6rem;border-radius:10px;
+  }
+  a.alt{display:block;margin-top:1.2rem;color:#bdb29c;font-size:.85rem}
+</style>
+</head>
+<body>
+  <div class="box">
+    <svg class="gem" viewBox="0 0 24 30" fill="none" stroke="#bf9b30" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M12 1 22 9 12 29 2 9Z"/>
+      <path d="M2 9h5L12 1M22 9h-5L12 1M7 9 12 29M17 9 12 29M7 9h10"/>
+    </svg>
+    <h1>Te llevamos a la tienda…</h1>
+    <p>Si no se abre sola en un segundo, tocá el botón.</p>
+    <a class="btn" href="https://tesoroestudio.mitiendanube.com/">Ir a la tienda</a>
+    <a class="alt" href="index.html">Volver al inicio</a>
+  </div>
+
+  <!-- Refuerzo por si el meta-refresh está deshabilitado. -->
+  <script>
+    setTimeout(function () {
+      location.replace("https://tesoroestudio.mitiendanube.com/");
+    }, 200);
+  </script>
+</body>
+</html>

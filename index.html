@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesoro Estudio · Fotografía escolar en Buenos Aires</title>
+<meta name="description" content="Estudio de fotografía en Buenos Aires especializado en fotografía escolar. Retratos, fotos de curso, egresados y eventos. Las familias acceden y descargan sus fotos con un código privado.">
+<meta name="theme-color" content="#1e3d32">
+
+<!-- Open Graph / redes -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tesoro Estudio · Fotografía escolar">
+<meta property="og:description" content="Hacemos de cada recuerdo un tesoro. Fotografía escolar profesional en Buenos Aires.">
+<meta property="og:url" content="https://tesoroestudio.ar/">
+<meta property="og:image" content="https://tesoroestudio.ar/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (gema dorada) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 30'%3E%3Cg fill='none' stroke='%23bf9b30' stroke-width='1.6' stroke-linejoin='round'%3E%3Cpath d='M12 1 22 9 12 29 2 9Z'/%3E%3Cpath d='M2 9h5L12 1M22 9h-5L12 1M7 9 12 29M17 9 12 29M7 9h10'/%3E%3C/g%3E%3C/svg%3E">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ SPRITE DE ÍCONOS (no se ve, se referencia con <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-gem" viewBox="0 0 24 30"><path d="M12 1 22 9 12 29 2 9Z"/><path d="M2 9h5L12 1M22 9h-5L12 1M7 9 12 29M17 9 12 29M7 9h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.2V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-3.8"/><path d="M22 9.2v4.8"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6.4a3 3 0 0 1 0 5.4"/><path d="M17.2 13.8a5.4 5.4 0 0 1 3.3 5.2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="10" r="1.8"/><path d="m3.5 17 4.5-3.6 3.5 2.6 3-2 6 4.5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="3.8"/><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.2 8-5.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.2-5.4-6.2-10.2A6.2 6.2 0 0 1 18.2 10.8C18.2 15.6 12 21 12 21z"/><circle cx="12" cy="10.6" r="2.2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11M7.5 11 12 15.5 16.5 11M5 20.5h14"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3.5H3.5v4.5M16 3.5h4.5v4.5M20.5 16v4.5H16M3.5 16v4.5H8"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9h16l-1-4H5L4 9z"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M9.5 20v-5h5v5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.7 6.3L20 11l-6.3 1.7L12 19l-1.7-6.3L4 11l6.3-1.7z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.38-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.14-1.19-.06-.1-.23-.16-.48-.29z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<!-- ================================ HEADER ================================ -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio" class="brand" aria-label="Tesoro Estudio — inicio">
+        <svg class="brand__gem ico" aria-hidden="true"><use href="#i-gem"/></svg>
+        <span class="brand__name">Tesoro<small>Estudio</small></span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#estudio">El estudio</a></li>
+        <li><a href="#escolar">Fotografía escolar</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="https://tesoroestudio.mitiendanube.com/" target="_blank" rel="noopener">Tienda ↗</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="#estudio" class="btn btn--ghost">Conocenos</a>
+        <a href="descargas.html" class="btn btn--gold">
+          <svg class="ico" aria-hidden="true"><use href="#i-key"/></svg>
+          Acceder a mis fotos
+        </a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- menú mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio">Inicio <span>01</span></a>
+  <a href="#estudio">El estudio <span>02</span></a>
+  <a href="#escolar">Fotografía escolar <span>03</span></a>
+  <a href="#galeria">Galería <span>04</span></a>
+  <a href="https://tesoroestudio.mitiendanube.com/" target="_blank" rel="noopener">Tienda <span>↗</span></a>
+  <a href="#contacto">Contacto <span>05</span></a>
+  <div class="mm-cta">
+    <a href="descargas.html" class="btn btn--gold btn--lg">Acceder a mis fotos</a>
+  </div>
+</div>
+
+<main id="inicio">
+
+  <!-- ================================ HERO ================================ -->
+  <section class="hero" aria-label="Bienvenida">
+    <div class="hero__bg">
+      <img src="img/hero.jpg" alt="" fetchpriority="high">
+    </div>
+    <div class="container hero__inner">
+      <div class="reveal">
+        <p class="eyebrow hero__eyebrow">Estudio de fotografía · Buenos Aires</p>
+        <h1>Hacemos de cada recuerdo un <em>tesoro</em>.</h1>
+        <p class="hero__sub">Somos un estudio especializado en <strong>fotografía escolar</strong>. Acompañamos a las instituciones y a las familias para que ningún momento importante de la infancia quede sin registrar.</p>
+        <div class="hero__cta">
+          <a href="#escolar" class="btn btn--gold btn--lg">
+            Ver fotografía escolar
+            <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="descargas.html" class="btn btn--outline-light btn--lg">
+            <svg class="ico" aria-hidden="true"><use href="#i-key"/></svg>
+            Acceder a mis fotos
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span>Descubrí más</span><span class="line"></span></div>
+  </section>
+
+  <!-- tira de valor -->
+  <div class="trust">
+    <div class="container">
+      <div class="trust__row reveal">
+        <span class="trust__item"><span class="gem"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></span> Fotografía escolar</span>
+        <span class="trust__item"><span class="gem"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span> Entrega digital en alta resolución</span>
+        <span class="trust__item"><span class="gem"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg></span> Acceso privado por código</span>
+        <span class="trust__item"><span class="gem"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg></span> Retoque profesional</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================== EL ESTUDIO =============================== -->
+  <section class="section" id="estudio">
+    <div class="container">
+      <div class="split">
+        <div class="split__media reveal">
+          <img src="img/nosotros.jpg" alt="Retrato de muestra del trabajo de Tesoro Estudio" loading="lazy">
+          <div class="badge">
+            <strong>Tesoro</strong>
+            <span>Estudio fotográfico · Buenos Aires</span>
+          </div>
+        </div>
+        <div class="split__body reveal" data-d="1">
+          <p class="eyebrow">El estudio</p>
+          <h2>Fotografía pensada para guardarse toda la vida.</h2>
+          <p class="lead">Tesoro Estudio nace de una idea simple: las fotos no son un trámite, son recuerdos que vamos a querer mirar dentro de veinte años.</p>
+          <p>Trabajamos cerca de cada institución y de cada familia. Cuidamos la luz, los gestos y los detalles para que cada imagen transmita algo real. Después editamos con criterio profesional y te las entregamos en alta resolución, listas para imprimir o compartir.</p>
+          <div class="about-stats">
+            <div><div class="num">Cercanía</div><div class="lbl">Trato directo y humano</div></div>
+            <div><div class="num">Calidad</div><div class="lbl">Edición y retoque profesional</div></div>
+            <div><div class="num">Simpleza</div><div class="lbl">Acceso y compra online</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- divisor gema -->
+  <div class="divider" aria-hidden="true"><span class="gem"><svg class="ico"><use href="#i-gem"/></svg></span></div>
+
+  <!-- ========================= FOTOGRAFÍA ESCOLAR (foco) ===================== -->
+  <section class="section section--surface" id="escolar">
+    <div class="container">
+      <div class="escolar-hero">
+        <div class="reveal">
+          <p class="eyebrow">Nuestro foco hoy</p>
+          <h2>Fotografía escolar que las familias quieren conservar.</h2>
+          <p class="lead">Coordinamos jornadas en jardines, primarias y secundarias. Retratos individuales, fotos de curso, egresados y actos: todo resuelto de principio a fin, sin complicaciones para la institución ni para las familias.</p>
+          <p>Nos encargamos de la logística, la producción y la entrega. Las familias reciben un <strong>código privado</strong> para ver, comprar y descargar las fotos de su hijo o hija cuando quieran.</p>
+          <a href="#contacto" class="btn btn--lg">
+            Coordinar una jornada
+            <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="escolar-imgs reveal" data-d="1">
+          <img src="img/escolar-1.jpg" alt="Fotografía escolar de muestra" loading="lazy">
+          <img src="img/escolar-2.jpg" alt="Retrato escolar de muestra" loading="lazy">
+        </div>
+      </div>
+
+      <!-- pasos -->
+      <div class="steps">
+        <div class="step reveal"><div class="step__n">Coordinamos</div><h3>Agendamos la jornada</h3><p>Definimos fecha, cursos y tipo de tomas junto a la institución, adaptándonos a sus tiempos.</p></div>
+        <div class="step reveal" data-d="1"><div class="step__n">Fotografiamos</div><h3>El día de las fotos</h3><p>Llegamos con todo el equipo y trabajamos de forma ágil para no alterar la rutina escolar.</p></div>
+        <div class="step reveal" data-d="2"><div class="step__n">Editamos</div><h3>Selección y retoque</h3><p>Elegimos las mejores tomas y las editamos con criterio profesional, cuidando color y detalle.</p></div>
+        <div class="step reveal" data-d="3"><div class="step__n">Entregamos</div><h3>Acceso con código</h3><p>Cada familia recibe un código para ver, comprar y descargar sus fotos en alta resolución.</p></div>
+      </div>
+
+      <!-- qué incluye -->
+      <div class="feature-grid">
+        <div class="feature reveal">
+          <div class="feature__ic"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></div>
+          <h3>Retratos individuales</h3>
+          <p>Retratos cuidados de cada alumno y alumna, con la mejor luz y expresión.</p>
+        </div>
+        <div class="feature reveal" data-d="1">
+          <div class="feature__ic"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3>Fotos de curso y grupos</h3>
+          <p>La clásica foto grupal del grado, prolija y bien compuesta, para enmarcar.</p>
+        </div>
+        <div class="feature reveal" data-d="2">
+          <div class="feature__ic"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></div>
+          <h3>Egresados y actos</h3>
+          <p>Cubrimos cierres de ciclo, egresos y eventos especiales del calendario escolar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== SERVICIOS =============================== -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-head is-centered reveal">
+        <p class="eyebrow is-centered">Servicios</p>
+        <h2>Más allá del aula.</h2>
+        <p class="lead">Empezamos por lo escolar, pero acompañamos cada etapa con la misma mirada y el mismo cuidado.</p>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <span class="svc__tag">Escolar</span>
+          <h3>Jornadas escolares</h3>
+          <p>Producción completa de fotografía para instituciones, de jardín a secundaria.</p>
+        </article>
+        <article class="svc reveal" data-d="1">
+          <span class="svc__tag">Retratos</span>
+          <h3>Retratos y books</h3>
+          <p>Sesiones individuales en estudio o locación, ideales para cada edad.</p>
+        </article>
+        <article class="svc reveal" data-d="2">
+          <span class="svc__tag">Egresados</span>
+          <h3>Egresados</h3>
+          <p>Producciones grupales e individuales para cerrar una etapa a lo grande.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__tag">Eventos</span>
+          <h3>Eventos institucionales</h3>
+          <p>Actos, muestras y celebraciones cubiertas de principio a fin.</p>
+        </article>
+        <article class="svc reveal" data-d="1">
+          <span class="svc__tag">Familias</span>
+          <h3>Fotos familiares</h3>
+          <p>Esos momentos que crecen rápido, capturados con calidez y naturalidad.</p>
+        </article>
+        <article class="svc reveal" data-d="2">
+          <span class="svc__tag">Productos</span>
+          <h3>Producto y emprendimientos</h3>
+          <p>Imágenes profesionales para tu tienda, catálogo o redes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- divisor gema -->
+  <div class="divider" aria-hidden="true"><span class="gem"><svg class="ico"><use href="#i-gem"/></svg></span></div>
+
+  <!-- =============================== GALERÍA =============================== -->
+  <section class="section section--tight" id="galeria">
+    <div class="container">
+      <div class="section-head is-centered reveal">
+        <p class="eyebrow is-centered">Galería</p>
+        <h2>Una muestra de nuestro trabajo.</h2>
+        <p class="lead">Tocá cualquier imagen para verla en grande. <em class="serif-italic">(Estas son fotos de muestra: reemplazalas por tu trabajo real.)</em></p>
+      </div>
+      <!-- la galería se completa desde js/main.js (editá la lista PHOTOS ahí) -->
+      <div class="gallery" id="gallery" aria-label="Galería de fotos"></div>
+    </div>
+  </section>
+
+  <!-- =========================== ACCESO POR CÓDIGO ========================== -->
+  <section class="section access" id="acceso">
+    <div class="container">
+      <div class="access__card reveal">
+        <div>
+          <p class="eyebrow is-light">Familias</p>
+          <h2>¿Ya tenés tu código?</h2>
+          <p class="lead">Si tu institución ya trabajó con nosotros, recibiste un código privado. Ingresalo para ver y descargar las fotos en alta resolución.</p>
+          <form class="access__form" id="accessTeaser">
+            <label for="teaserCode">Tu código de acceso</label>
+            <div class="code-input">
+              <input id="teaserCode" name="code" type="text" inputmode="latin" autocomplete="off"
+                     placeholder="EJ: SC4A-2X7K" maxlength="14" aria-label="Código de acceso">
+              <button type="submit" class="btn btn--gold">
+                Ver mis fotos
+                <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </button>
+            </div>
+            <p class="access__hint">¿No tenés tu código? Escribinos y te ayudamos a recuperarlo.</p>
+          </form>
+        </div>
+        <div aria-hidden="true">
+          <ul style="list-style:none;margin:0;padding:0;display:grid;gap:1rem;position:relative;z-index:1">
+            <li style="display:flex;gap:.9rem;align-items:flex-start;color:#e4dac6">
+              <svg class="ico" style="color:#f0d488;margin-top:2px" aria-hidden="true"><use href="#i-check"/></svg>
+              <span>Acceso privado, solo con tu código</span></li>
+            <li style="display:flex;gap:.9rem;align-items:flex-start;color:#e4dac6">
+              <svg class="ico" style="color:#f0d488;margin-top:2px" aria-hidden="true"><use href="#i-check"/></svg>
+              <span>Descarga en alta resolución, sin marca de agua</span></li>
+            <li style="display:flex;gap:.9rem;align-items:flex-start;color:#e4dac6">
+              <svg class="ico" style="color:#f0d488;margin-top:2px" aria-hidden="true"><use href="#i-check"/></svg>
+              <span>Disponibles las 24 horas, desde cualquier dispositivo</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== CONTACTO =============================== -->
+  <section class="section section--surface" id="contacto">
+    <div class="container">
+      <div class="contact">
+        <div class="contact__info reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>Trabajemos juntos.</h2>
+          <p>¿Sos parte de una institución o querés coordinar una sesión? Escribinos y te respondemos a la brevedad.</p>
+          <div class="contact__chips">
+            <a class="chip" href="https://wa.me/5491100000000" target="_blank" rel="noopener">
+              <span class="chip__ic"><svg class="ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></span>
+              <span><b>WhatsApp</b><span>+54 9 11 0000-0000</span></span>
+            </a>
+            <a class="chip" href="mailto:hola@tesoroestudio.ar">
+              <span class="chip__ic"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span><b>Email</b><span>hola@tesoroestudio.ar</span></span>
+            </a>
+            <a class="chip" href="https://instagram.com/tesoroestudio" target="_blank" rel="noopener">
+              <span class="chip__ic"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></span>
+              <span><b>Instagram</b><span>@tesoroestudio</span></span>
+            </a>
+            <div class="chip">
+              <span class="chip__ic"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <span><b>Ubicación</b><span>Buenos Aires, Argentina</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" data-d="1">
+          <!-- Este formulario abre WhatsApp con el mensaje ya escrito (no necesita servidor).
+               Si preferís recibir los mensajes por email, ver el README (opción Formspree). -->
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <div class="field">
+                <label for="cf-name">Nombre</label>
+                <input id="cf-name" name="name" type="text" required placeholder="Tu nombre">
+              </div>
+              <div class="field">
+                <label for="cf-from">Institución <span style="color:var(--muted);font-weight:500">(opcional)</span></label>
+                <input id="cf-from" name="org" type="text" placeholder="Nombre del colegio / jardín">
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Asunto</label>
+              <select id="cf-subject" name="subject">
+                <option>Coordinar jornada escolar</option>
+                <option>Sesión de retratos</option>
+                <option>Egresados</option>
+                <option>Evento</option>
+                <option>Recuperar mi código de acceso</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cf-msg">Mensaje</label>
+              <textarea id="cf-msg" name="message" required placeholder="Contanos qué necesitás..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold btn--lg btn--block">
+              <svg class="ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="form__note">Al enviar se abrirá WhatsApp con tu mensaje listo para mandar.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- =============================== FOOTER =============================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="#inicio" class="brand">
+          <svg class="brand__gem ico" aria-hidden="true"><use href="#i-gem"/></svg>
+          <span class="brand__name">Tesoro<small>Estudio</small></span>
+        </a>
+        <p class="footer__desc">Estudio de fotografía en Buenos Aires. Hacemos de cada recuerdo un tesoro.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/tesoroestudio" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          <a href="mailto:hola@tesoroestudio.ar" aria-label="Email"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#estudio">El estudio</a></li>
+          <li><a href="#escolar">Fotografía escolar</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Familias</h4>
+        <ul>
+          <li><a href="descargas.html">Acceder a mis fotos</a></li>
+          <li><a href="https://tesoroestudio.mitiendanube.com/" target="_blank" rel="noopener">Tienda online ↗</a></li>
+          <li><a href="#acceso">¿Cómo funciona el código?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:hola@tesoroestudio.ar">hola@tesoroestudio.ar</a></li>
+          <li><a href="https://instagram.com/tesoroestudio" target="_blank" rel="noopener">@tesoroestudio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2025</span> Tesoro Estudio · tesoroestudio.ar</span>
+      <span>Hecho con cuidado en Buenos Aires</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-fab" href="https://wa.me/5491100000000" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg class="ico-fill" style="width:30px;height:30px" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<!-- lightbox de la galería -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <button class="lightbox__close" id="lbClose" aria-label="Cerrar"><svg class="ico" style="width:22px;height:22px" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="lightbox__nav prev" id="lbPrev" aria-label="Anterior"><svg class="ico" style="width:22px;height:22px" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox__nav next" id="lbNext" aria-label="Siguiente"><svg class="ico" style="width:22px;height:22px" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="lightbox__counter" id="lbCounter"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
