@@ -112,11 +112,11 @@ p{margin:0 0 1.1em}
 /* --------------------------- Botones ----------------------------------- */
 .btn{
   --bg:var(--brand);--fg:#f6f1e7;
-  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
-  padding:.95rem 1.6rem;
-  font-family:var(--ff-body);font-weight:700;font-size:.95rem;letter-spacing:.01em;
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.9rem 1.55rem;
+  font-family:var(--ff-body);font-weight:700;font-size:.92rem;letter-spacing:.02em;
   color:var(--fg);background:var(--bg);
-  border:1px solid transparent;border-radius:100px;
+  border:1.5px solid transparent;border-radius:100px;
   transition:transform .35s var(--ease),box-shadow .35s var(--ease),
              background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease);
   will-change:transform;
@@ -136,7 +136,7 @@ p{margin:0 0 1.1em}
 .btn--outline-light{--bg:transparent;--fg:#f3ecdd;border-color:var(--line-dark)}
 .btn--outline-light:hover{border-color:var(--gold);color:#fff}
 
-.btn--lg{padding:1.1rem 2rem;font-size:1rem}
+.btn--lg{padding:1.05rem 1.9rem;font-size:.97rem;letter-spacing:.025em}
 .btn--block{display:flex;width:100%}
 
 /* link con subrayado dorado */
@@ -188,15 +188,15 @@ p{margin:0 0 1.1em}
 .brand__name small{display:block;font-family:var(--ff-body);font-weight:700;
   font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;opacity:.72;margin-top:3px}
 
-.nav__links{display:flex;align-items:center;gap:.35rem;list-style:none;margin:0;padding:0}
+.nav__links{display:flex;align-items:center;gap:.05rem;list-style:none;margin:0;padding:0}
 .nav__links a{
-  position:relative;display:inline-block;padding:.55rem .85rem;border-radius:100px;
-  font-weight:600;font-size:.95rem;color:#eadfce;
+  position:relative;display:inline-block;padding:.48rem .72rem;border-radius:100px;
+  font-weight:600;font-size:.86rem;color:#eadfce;white-space:nowrap;
   transition:color .3s var(--ease),background .3s var(--ease);
 }
 .is-scrolled .nav__links a,.nav--solid .nav__links a{color:var(--ink-soft)}
 .nav__links a::after{
-  content:"";position:absolute;left:.85rem;right:.85rem;bottom:.32rem;height:1.5px;
+  content:"";position:absolute;left:.72rem;right:.72rem;bottom:.28rem;height:1.5px;
   background:var(--gold);transform:scaleX(0);transform-origin:center;
   transition:transform .35s var(--ease);
 }
@@ -204,8 +204,16 @@ p{margin:0 0 1.1em}
 .nav__links a:hover{color:#fff}
 .is-scrolled .nav__links a:hover,.nav--solid .nav__links a:hover{color:var(--brand-ink)}
 
-.nav__cta{display:flex;align-items:center;gap:.6rem}
-.nav__cta .btn{padding:.7rem 1.2rem;font-size:.9rem}
+.nav__cta{display:flex;align-items:center;gap:.5rem}
+.nav__cta .btn{padding:.58rem 1.05rem;font-size:.84rem}
+
+/* ghost button visible sobre fondo oscuro (header sin scroll) */
+.site-header:not(.is-scrolled) .btn--ghost{
+  --fg:#e8dfc8;border-color:rgba(250,246,239,.28);
+}
+.site-header:not(.is-scrolled) .btn--ghost:hover{
+  border-color:var(--gold);color:var(--gold);
+}
 
 /* burger */
 .burger{
