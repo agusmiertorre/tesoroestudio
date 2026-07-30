@@ -256,7 +256,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 
 /* =============================== HERO ================================== */
 .hero{
-  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  position:relative;min-height:75vh;display:flex;align-items:flex-end;
   color:#E8F4FA;overflow:hidden;isolation:isolate;
 }
 .hero__bg{position:absolute;inset:0;z-index:-2}
@@ -572,7 +572,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .footer__top > :first-child{grid-column:1/-1}
 }
 @media (max-width:860px){
-  .nav__links,.nav__cta .btn--ghost{display:none}
+  .nav__links,.nav__cta .btn--ghost{display:none}.nav__cta .btn{padding:.42rem .8rem;font-size:.78rem}
   .burger{display:flex}
   .split,.escolar-hero,.contact,.access__card{grid-template-columns:1fr}
   .split--reverse .split__media{order:0}
@@ -587,6 +587,6 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .form__row{grid-template-columns:1fr}
   .about-stats{gap:1.6rem}
   .split__media .badge{left:0}
-  .nav__cta .btn{padding:.6rem 1rem;font-size:.85rem}
+  .nav__cta .btn{padding:.38rem .7rem;font-size:.75rem}
   .footer__top{grid-template-columns:1fr}
 }
