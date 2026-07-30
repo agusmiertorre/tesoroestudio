@@ -579,11 +579,12 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .split__media img{aspect-ratio:16/11}
   .escolar-imgs{max-width:520px}
   .feature-grid,.svc-grid{grid-template-columns:1fr 1fr}
-  .access__card{text-align:left}
+  .access__card{text-align:left;padding:1.75rem}
 }
 @media (max-width:560px){
-  .code-input{flex-direction:column;gap:.5rem}
-  .code-input .btn{width:100%;justify-content:center}
+  .code-input{flex-direction:column;gap:.5rem;width:100%}
+  .code-input input,.code-input .btn{width:100%;justify-content:center}
+  .access__card{padding:1.25rem}
   .gallery{columns:1}
   .feature-grid,.svc-grid,.steps{grid-template-columns:1fr}
   .form__row{grid-template-columns:1fr}
