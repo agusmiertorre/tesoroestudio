@@ -190,8 +190,8 @@ p{margin:0 0 1.1em}
 .is-scrolled .brand,.nav--solid .brand{color:var(--brand)}
 
 /* Logo SVG de marca */
-.brand__logo{height:34px;width:auto;display:block}.brand__logo--dark{display:none}
-.is-scrolled .brand__logo--light,.nav--solid .brand__logo--light{display:none}.is-scrolled .brand__logo--dark,.nav--solid .brand__logo--dark{display:block}
+.brand__logo{height:34px;width:auto;display:block;filter:brightness(0) invert(1)}
+.is-scrolled .brand__logo,.nav--solid .brand__logo{filter:none}
 
 .nav__links{display:flex;align-items:center;gap:.05rem;list-style:none;margin:0;padding:0}
 .nav__links a{
@@ -582,6 +582,8 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .access__card{text-align:left}
 }
 @media (max-width:560px){
+  .code-input{flex-direction:column;gap:.5rem}
+  .code-input .btn{width:100%;justify-content:center}
   .gallery{columns:1}
   .feature-grid,.svc-grid,.steps{grid-template-columns:1fr}
   .form__row{grid-template-columns:1fr}
