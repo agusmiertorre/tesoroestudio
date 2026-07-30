@@ -255,7 +255,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 .mobile-menu .mm-cta{margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap}
 
 /* =============================== HERO ================================== */
-.hero{
+.hero{background:var(--brand);
   position:relative;min-height:75vh;display:flex;align-items:flex-end;
   color:#E8F4FA;overflow:hidden;isolation:isolate;
 }

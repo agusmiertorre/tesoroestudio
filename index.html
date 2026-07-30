@@ -83,7 +83,7 @@
   <!-- ================================ HERO ================================ -->
   <section class="hero" aria-label="Bienvenida">
     <div class="hero__bg">
-      <img src="img/hero.jpg" alt="" fetchpriority="high">
+      <img src="img/hero.jpg" alt="" fetchpriority="high" onerror="this.style.display='none'">
     </div>
     <div class="container hero__inner">
       <div class="reveal">
@@ -109,8 +109,8 @@
   <section class="section" id="nosotros">
     <div class="container">
       <div class="split">
-        <div class="split__media reveal">
-          <img src="img/nosotros.jpg" alt="Trabajo de Tesoro Estudio" loading="lazy">
+        <div class="split__media reveal" id="splitMedia">
+          <img src="img/nosotros.jpg" alt="Trabajo de Tesoro Estudio" loading="lazy" onerror="this.closest('.split__media').style.display='none'">
           <div class="badge">
             <strong>Tesoro</strong>
             <span>Estudio fotográfico · Buenos Aires</span>
