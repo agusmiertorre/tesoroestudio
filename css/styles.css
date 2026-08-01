@@ -191,6 +191,7 @@ p{margin:0 0 1.1em}
 
 /* Logo SVG de marca */
 .brand__logo{height:44px;width:auto;display:block;color:#E8F4FA}
+@media (min-width:861px){.brand__logo{height:56px}}
 .is-scrolled .brand__logo,.nav--solid .brand__logo{color:var(--brand)}
 
 .nav__links{display:flex;align-items:center;gap:.05rem;list-style:none;margin:0;padding:0}
@@ -256,7 +257,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 
 /* =============================== HERO ================================== */
 .hero{background:var(--brand);
-  position:relative;min-height:100vh;display:flex;align-items:flex-end;
+  position:relative;min-height:100vh;display:flex;align-items:center;padding-top:80px;
   color:#E8F4FA;overflow:hidden;isolation:isolate;
 }
 .hero__bg{position:absolute;inset:0;z-index:-2}
@@ -591,7 +592,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .footer__top > :first-child{grid-column:1/-1}
 }
 @media (max-width:860px){
-  .nav__links,.nav__cta .btn--ghost{display:none}.nav__cta .btn{padding:.42rem .8rem;font-size:.78rem}
+  .nav__links,.nav__cta .btn--ghost,.nav__cta .btn,.mm-cta{display:none}
   .burger{display:flex}
   .split,.escolar-hero,.contact,.access__card{grid-template-columns:1fr}
   .split--reverse .split__media{order:0}
@@ -610,6 +611,6 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .form__row{grid-template-columns:1fr}
   .about-stats{gap:1.6rem}
   .split__media .badge{left:0}
-  .nav__cta .btn{padding:.38rem .7rem;font-size:.75rem}
   .footer__top{grid-template-columns:1fr}
+  .split__body .lead{margin-top:1.4rem}
 }
