@@ -256,7 +256,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 
 /* =============================== HERO ================================== */
 .hero{background:var(--brand);
-  position:relative;min-height:75vh;display:flex;align-items:flex-end;
+  position:relative;min-height:100vh;display:flex;align-items:flex-end;
   color:#E8F4FA;overflow:hidden;isolation:isolate;
 }
 .hero__bg{position:absolute;inset:0;z-index:-2}
