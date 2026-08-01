@@ -228,3 +228,18 @@
     });
   }
 })();
+
+/* ========================= Loader / Splash ========================= */
+(function () {
+  var loader = document.getElementById('loader');
+  if (!loader) return;
+  function dismiss() {
+    loader.classList.add('fade-out');
+    loader.addEventListener('transitionend', function () { loader.remove(); }, { once: true });
+  }
+  if (document.readyState === 'complete') {
+    setTimeout(dismiss, 500);
+  } else {
+    window.addEventListener('load', function () { setTimeout(dismiss, 500); });
+  }
+})();
