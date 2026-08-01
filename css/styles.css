@@ -190,8 +190,8 @@ p{margin:0 0 1.1em}
 .is-scrolled .brand,.nav--solid .brand{color:var(--brand)}
 
 /* Logo SVG de marca */
-.brand__logo{height:34px;width:auto;display:block;filter:brightness(0) invert(1)}
-.is-scrolled .brand__logo,.nav--solid .brand__logo{filter:none}
+.brand__logo{height:44px;width:auto;display:block;color:#E8F4FA}
+.is-scrolled .brand__logo,.nav--solid .brand__logo{color:var(--brand)}
 
 .nav__links{display:flex;align-items:center;gap:.05rem;list-style:none;margin:0;padding:0}
 .nav__links a{
@@ -271,8 +271,10 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 .hero__eyebrow{color:#C8E0EA;opacity:.95}
 .hero h1{color:#F0F7FC;max-width:16ch;margin-bottom:1.4rem}
 .hero h1 em{color:var(--mint);font-style:italic}
-.hero__sub{max-width:48ch;font-size:clamp(1.05rem,1.5vw,1.3rem);color:#C8E0EA;line-height:1.55;margin-bottom:2rem}
-.hero__cta{display:flex;gap:.9rem;flex-wrap:wrap}
+.hero__inner .reveal{text-align:center}
+.hero__sub{max-width:48ch;font-size:clamp(1.05rem,1.5vw,1.3rem);color:#C8E0EA;line-height:1.55;margin-bottom:2rem;margin-inline:auto}
+.hero h1{margin-inline:auto}
+.hero__cta{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center}
 .hero__scroll{
   position:absolute;right:var(--gutter);bottom:2rem;z-index:2;
   display:flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.18em;
