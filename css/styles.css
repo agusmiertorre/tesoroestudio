@@ -260,6 +260,11 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   position:relative;min-height:100vh;display:flex;align-items:center;padding-top:80px;
   color:#E8F4FA;overflow:hidden;isolation:isolate;
 }
+.hero::before{
+  content:"";position:absolute;right:-120px;top:-120px;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(143,204,224,.1),transparent 65%);
+  pointer-events:none;
+}
 .hero__bg{position:absolute;inset:0;z-index:-2}
 .hero__bg img{width:100%;height:100%;object-fit:cover}
 .hero__bg::after{
@@ -268,7 +273,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
     radial-gradient(120% 90% at 80% 10%,rgba(0,45,67,.18),transparent 60%),
     linear-gradient(180deg,rgba(0,30,45,.38) 0%,rgba(0,30,45,.18) 35%,rgba(0,25,38,.8) 100%);
 }
-.hero__inner{padding-block:clamp(1.5rem,4vh,3.5rem) clamp(2.5rem,6vh,5rem);width:100%}
+.hero__inner{padding-block:clamp(1.5rem,4vh,3.5rem) clamp(2.5rem,6vh,5rem);width:100%;position:relative;z-index:1}
 .hero__eyebrow{color:#C8E0EA;opacity:.95}
 .hero h1{color:#F0F7FC;max-width:16ch;margin-bottom:1.4rem}
 .hero h1 em{color:var(--mint);font-style:italic}
@@ -294,6 +299,8 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 .trust__item .gem svg{width:16px;height:20px}
 
 /* ============================== NOSOTROS =============================== */
+#nosotros{scroll-margin-top:72px}
+.split__body h2{font-size:clamp(1.4rem,2.6vw,2rem)}
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .split--reverse .split__media{order:2}
 .split__media{position:relative}
@@ -473,25 +480,26 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 .form__note{font-size:.82rem;color:var(--muted);margin:0}
 
 /* =============================== FOOTER =============================== */
-.footer{background:var(--brand);color:#9BBFCC;padding-block:clamp(3rem,6vw,4.5rem) 2rem}
-.footer__top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
-.footer .brand{color:#E8F4FA;margin-bottom:1rem}
-.footer__desc{font-size:.92rem;color:#7AAABB;max-width:30ch}
-.footer h4{font-family:var(--ff-body);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:1.1rem;font-weight:700}
-.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
-.footer ul a{color:#9BBFCC;font-size:.95rem;transition:color .3s var(--ease)}
-.footer ul a:hover{color:#fff}
-.footer__social{display:flex;gap:.6rem;margin-top:.4rem}
-.footer__social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-dark);
-  display:grid;place-items:center;color:#C8E0EA;transition:border-color .3s var(--ease),
-  background .3s var(--ease),color .3s var(--ease)}
-.footer__social a:hover{border-color:var(--accent);background:rgba(143,204,224,.14);color:#fff}
+.footer{background:var(--brand);color:#9BBFCC;padding-block:clamp(2.5rem,5vw,4rem) 0}
+.footer__main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:3rem;
+  padding-bottom:clamp(2rem,4vw,3rem)}
+.footer__brand{display:flex;flex-direction:column;gap:1rem}
+.footer__iso{height:52px;width:auto}
+.footer__tagline{font-size:.92rem;color:#7AAABB;line-height:1.55;margin:0;max-width:24ch}
+.footer__social{display:flex;gap:.6rem}
+.footer__social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-dark);
+  display:grid;place-items:center;color:#C8E0EA;
+  transition:border-color .3s var(--ease),background .3s var(--ease)}
+.footer__social a:hover{border-color:var(--accent);background:rgba(143,204,224,.14)}
 .footer__social svg{width:18px;height:18px}
-.footer__bottom{margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--line-dark);
-  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
-  font-size:.84rem;color:#6A99AA}
-.footer__bottom a:hover{color:#fff}
+.footer__col{display:flex;flex-direction:column;gap:.55rem}
+.footer__label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);font-weight:700;margin:0 0 .5rem}
+.footer__col a{color:#9BBFCC;font-size:.93rem;transition:color .3s var(--ease)}
+.footer__col a:hover{color:#fff}
+.footer__bottom{border-top:1px solid var(--line-dark);padding-block:1.4rem;
+  display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;
+  font-size:.82rem;color:#6A99AA}
 
 /* ============================ WHATSAPP FAB ============================ */
 .wa-fab{
@@ -562,13 +570,13 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   position:fixed;inset:0;z-index:99999;
   background:#082E15;
   display:flex;align-items:center;justify-content:center;
-  transition:opacity .7s cubic-bezier(.4,0,.2,1),visibility .7s cubic-bezier(.4,0,.2,1);
+  transition:opacity 1s cubic-bezier(.4,0,.2,1),visibility 1s cubic-bezier(.4,0,.2,1);
 }
 #loader.fade-out{opacity:0;visibility:hidden;pointer-events:none}
 #loader svg{
   width:clamp(260px,60vw,520px);
   color:#EDEDE4;
-  animation:loader-logo .9s cubic-bezier(.16,1,.3,1) both;
+  animation:loader-logo 1.3s cubic-bezier(.16,1,.3,1) both;
 }
 @keyframes loader-logo{
   from{opacity:0;transform:scale(.88)}
@@ -588,12 +596,14 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
 @media (max-width:1024px){
   .gallery{columns:2}
   .steps{grid-template-columns:1fr 1fr}
-  .footer__top{grid-template-columns:1fr 1fr}
-  .footer__top > :first-child{grid-column:1/-1}
+  .footer__main{grid-template-columns:1fr 1fr}
+  .footer__brand{grid-column:1/-1}
 }
 @media (max-width:860px){
-  .nav__links,.nav__cta .btn--ghost,.nav__cta .btn,.mm-cta{display:none}
+  .nav__links,.nav__cta .btn--ghost,.nav__cta .btn{display:none}
   .burger{display:flex}
+  .mm-cta .btn{font-size:.9rem;padding:.55rem 1.1rem}
+  .hero__cta .btn{flex:1;min-width:0;justify-content:center;text-align:center}
   .split,.escolar-hero,.contact,.access__card{grid-template-columns:1fr}
   .split--reverse .split__media{order:0}
   .split__media img{aspect-ratio:16/11}
@@ -611,6 +621,6 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .form__row{grid-template-columns:1fr}
   .about-stats{gap:1.6rem}
   .split__media .badge{left:0}
-  .footer__top{grid-template-columns:1fr}
+  .footer__main{grid-template-columns:1fr}
   .split__body .lead{margin-top:1.4rem}
 }

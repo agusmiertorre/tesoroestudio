@@ -238,7 +238,7 @@
     loader.addEventListener('transitionend', function () { loader.remove(); }, { once: true });
   }
   if (document.readyState === 'complete') {
-    setTimeout(dismiss, 500);
+    setTimeout(dismiss, 1600);
   } else {
     window.addEventListener('load', function () { setTimeout(dismiss, 500); });
   }

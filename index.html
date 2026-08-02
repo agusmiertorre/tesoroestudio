@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=7">
+<link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body>
 
@@ -129,7 +129,7 @@
     </div>
     <div class="container hero__inner">
       <div class="reveal">
-        <p class="eyebrow hero__eyebrow">Estudio de fotografía · Buenos Aires</p>
+        <p class="eyebrow hero__eyebrow">Estudio de fotografía</p>
         <h1>Hacemos de cada recuerdo un <em>tesoro</em>.</h1>
         <p class="hero__sub">Somos un estudio especializado en <strong>fotografía escolar</strong>. Acompañamos a las instituciones y a las familias para que ningún momento importante de la infancia quede sin registrar.</p>
         <div class="hero__cta">
@@ -157,7 +157,7 @@
         <div class="split__body reveal" data-d="1">
           <p class="eyebrow">Nosotros</p>
           <h2>Fotografías que conservan tu historia</h2>
-          <p class="lead">Tesoro Estudio nace de la unión familiar y del amor por el lenguaje audiovisual. Somos un equipo de especialistas apasionados por traducir visiones en imágenes de alto impacto.</p>
+          <p>Tesoro Estudio nace de la unión familiar y del amor por el lenguaje audiovisual. Somos un equipo de especialistas apasionados por traducir visiones en imágenes de alto impacto.</p>
           <p>Combinamos el compromiso personal de una empresa familiar con el rigor técnico y creativo que exige la producción actual. Tu proyecto es nuestro próximo tesoro.</p>
 
           <div style="display:flex;gap:.8rem;margin-top:2rem;flex-wrap:wrap">
@@ -178,9 +178,9 @@
   <!-- ========================= SERVICIOS (3 cards) ======================= -->
   <section class="section section--surface">
     <div class="container">
-      <div class="section-head is-centered reveal">
-        <p class="eyebrow is-centered">Lo que hacemos</p>
-        <h2>Un capítulo especial: La fotografía escolar</h2>
+      <div class="section-head reveal">
+        <p class="eyebrow">Lo que hacemos</p>
+        <h2>Un capítulo especial: fotografía escolar</h2>
       </div>
       <div class="feature-grid" style="margin-top:2.8rem">
         <div class="feature reveal">
@@ -245,43 +245,37 @@
 <!-- =============================== FOOTER =============================== -->
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
-      <div>
-        <a href="#inicio" class="brand">
-          <img src="img/iso-white.png" alt="Tesoro Estudio" class="brand__logo">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="#inicio" aria-label="Tesoro Estudio — inicio">
+          <img src="img/iso-white.png" alt="Tesoro Estudio" class="footer__iso">
         </a>
-        <p class="footer__desc">Estudio de fotografía en Buenos Aires. Hacemos de cada recuerdo un tesoro.</p>
+        <p class="footer__tagline">Fotografía escolar<br>en Buenos Aires.</p>
         <div class="footer__social">
-          <a href="https://instagram.com/tesoro.estudio" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a>
-          <a href="mailto:info@tesoroestudio.com.ar" aria-label="Email"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></a>
+          <a href="https://instagram.com/tesoro.estudio" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>
+          </a>
+          <a href="mailto:info@tesoroestudio.com.ar" aria-label="Email">
+            <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
         </div>
       </div>
-      <div>
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="https://tesoroestudio.com.ar/tienda" target="_blank" rel="noopener">Tienda ↗</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-        </ul>
+      <div class="footer__col">
+        <p class="footer__label">Sitio</p>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="https://tesoroestudio.com.ar/tienda" target="_blank" rel="noopener">Realizar mi pedido ↗</a>
       </div>
-      <div>
-        <h4>Familias</h4>
-        <ul>
-          <li><a href="descargas.html">Acceder a mis fotos</a></li>
-          <li><a href="#acceso">¿Cómo funciona el código?</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="mailto:info@tesoroestudio.com.ar">info@tesoroestudio.com.ar</a></li>
-          <li><a href="https://instagram.com/tesoro.estudio" target="_blank" rel="noopener">@tesoro.estudio</a></li>
-        </ul>
+      <div class="footer__col">
+        <p class="footer__label">Familias</p>
+        <a href="#acceso">Código fotos digitales</a>
+        <a href="mailto:info@tesoroestudio.com.ar">info@tesoroestudio.com.ar</a>
+        <a href="https://instagram.com/tesoro.estudio" target="_blank" rel="noopener">@tesoro.estudio</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© <span id="year">2025</span> Tesoro Estudio · tesoroestudio.ar</span>
-      <span>Hecho con cuidado en Buenos Aires</span>
+      <span>© <span id="year">2025</span> Tesoro Estudio</span>
+      <span>tesoroestudio.ar</span>
     </div>
   </div>
 </footer>
@@ -295,6 +289,6 @@
   <div class="lightbox__counter" id="lbCounter"></div>
 </div>
 
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>
