@@ -615,7 +615,7 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .burger{display:flex}
   .mm-cta .btn{font-size:.9rem;padding:.55rem 1.1rem}
   .hero__cta{flex-direction:column;gap:.7rem}
-  .hero__scroll{bottom:.3rem}
+  .hero__scroll{display:none}
   .hero__cta .btn{width:100%;justify-content:center;text-align:center}
   .mobile-br{display:block}
   .section-head h2{white-space:normal}
