@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Confirmación de compra — Tesoro Estudio</title>
+  <title>Pago confirmado — Tesoro Estudio</title>
   <style type="text/css">
     /* Reset */
     #outlook a{padding:0;}
@@ -21,7 +21,7 @@
     #bodyCell{padding:24px;}
     #templateContainer{width:600px;}
     body,#bodyTable{background-color:#EDEDE4;}
-    #bodyCell{border-top:4px solid #B9E1A3;} 
+    #bodyCell{border-top:4px solid #B9E1A3;}
 
     /* Typography */
     h1{
@@ -175,7 +175,7 @@
                         <img src="https://tesoroestudio.com.ar/img/logo-white.png" alt="Tesoro Estudio" width="160" style="display:block;height:auto;">
                       </td>
                       <td align="right" valign="middle" style="font-family:'Nunito','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#EDEDE4;letter-spacing:.06em;text-transform:uppercase;">
-                        Confirmación de compra
+                        Pago confirmado
                       </td>
                     </tr>
                   </table>
@@ -188,9 +188,9 @@
               <td align="center" valign="top" id="templateBody">
                 <div class="bodyContent">
 
-                  <h1 style="text-align:center;">¡Gracias por tu pedido!</h1>
-                  <p>Recibimos tu compra en <strong>{{store_name}}</strong>. Estamos esperando la confirmación del pago, que puede demorar hasta 72 hs hábiles según el medio elegido.</p>
-                  <p>Cuando eso ocurra te avisamos. Mientras tanto, si tenés alguna duda escribinos a <a href="mailto:info@tesoroestudio.com.ar" style="color:#005F7A;font-weight:700;">info@tesoroestudio.com.ar</a>.</p>
+                  <h1 style="text-align:center;">Hola {{contact_name}}, ¡recibimos tu pago!</h1>
+                  <p>¡Excelente! Confirmamos el pago por tu compra en <strong>{{store_name}}</strong>. Ya estamos preparando todo para vos.</p>
+                  <p>Si tenés alguna duda escribinos a <a href="mailto:info@tesoroestudio.com.ar" style="color:#005F7A;font-weight:700;">info@tesoroestudio.com.ar</a>.</p>
 
                   <!-- ORDER TABLE -->
                   <table border="0" cellpadding="0" cellspacing="0" width="100%" class="order-table" style="margin-top:28px;">
@@ -215,7 +215,7 @@
                       {% else %}
                       <tr>
                         <td width="65%" class="order-item-name">
-                          <strong>{{ item.name }}{% if item.is_gift %} (Regalo){% endif %} {{ item.variationName }}</strong> × {{ item.quantity }}
+                          <strong>{{ item.name }} {{ item.variationName }}</strong> × {{ item.quantity }}
                         </td>
                         <td width="35%" class="order-item-price">
                           <strong>{{ item.priceFormat }}</strong><br><span style="font-size:12px;color:#7A5560;">c/u</span>
@@ -224,54 +224,6 @@
                       {% endif %}
                     {% endfor %}
 
-                    {% for promotion in order.promotional_discount.promotions_applied %}
-                      {% if promotion.discount_script_type == "NAtX%off" %}
-                      <tr>
-                        <td width="65%" class="order-item-name" style="color:#082E15;">
-                          {{ promotion.selected_threshold.discount_decimal_percentage * 100 }}% OFF{% if promotion.scope_value_name %} en <strong>{{ promotion.scope_value_name }}</strong>{% endif %} ({{ promotion.selected_threshold.quantity }}+)
-                        </td>
-                        <td width="35%" class="order-item-price" style="color:#082E15;">−{{promotion.total_discount_amount_short}}</td>
-                      </tr>
-                      {% else %}
-                      <tr>
-                        <td width="65%" class="order-item-name" style="color:#082E15;">
-                          {% if promotion.discount_script_type == "CrossSelling" %}Descuento
-                          {% elseif promotion.discount_script_type == "%off" %}Descuento <strong>{{ promotion.percentage_off }}% OFF</strong>
-                          {% elseif promotion.coupon_activated %}Descuento del cupón
-                          {% elseif promotion.is_cart_discount %}{% if promotion.cart_discount.is_percentage %}Descuento <strong>{{ promotion.cart_discount.value | round }}% OFF</strong>{% else %}Descuento{% endif %}
-                          {% else %}Descuento{% endif %}
-                          {% if promotion.scope_value_name and not promotion.is_cart_discount %} en <strong>{{ promotion.scope_value_name }}</strong>{% endif %}
-                        </td>
-                        <td width="35%" class="order-item-price" style="color:#082E15;">−{{promotion.total_discount_amount_short}}</td>
-                      </tr>
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if order.shipping_pickup_type != 'non-shippable' %}
-                    <tr>
-                      <td width="65%" class="order-item-name" style="color:#7A5560;font-size:13px;">
-                        {% if order.shipping_pickup_type == 'ship' %}Envío{% else %}Entrega{% endif %}
-                      </td>
-                      <td width="35%" class="order-item-price" style="color:#7A5560;font-size:13px;">
-                        {% if order.show_shipping_price %}{% if order.shipping == 0 %}Gratis{% else %}{{order.shippingFormat}}{% endif %}{% else %}A convenir{% endif %}
-                      </td>
-                    </tr>
-                    {% endif %}
-
-                    {% if order.discountCoupon > 0 %}
-                    <tr>
-                      <td width="65%" class="order-item-name" style="color:#082E15;">Cupón <strong>{{order.coupon}}</strong></td>
-                      <td width="35%" class="order-item-price" style="color:#082E15;">{{order.discountCouponFormat}}</td>
-                    </tr>
-                    {% endif %}
-
-                    {% if order.discountGateway > 0 %}
-                    <tr>
-                      <td width="65%" class="order-item-name" style="color:#082E15;">Descuento por <strong>{{order.paymentMethod}}</strong></td>
-                      <td width="35%" class="order-item-price" style="color:#082E15;">{{order.discountGatewayFormat}}</td>
-                    </tr>
-                    {% endif %}
-
                     <tr>
                       <td width="65%" class="order-total-label">TOTAL</td>
                       <td width="35%" class="order-total-value">{{order.totalFormat}}</td>
@@ -279,8 +231,7 @@
                   </table>
 
                   <!-- SHIPPING -->
-                  {% if order.shipping_pickup_type == 'non-shippable' %}
-                  {% elseif order.shipping_pickup_type == 'ship' %}
+                  {% if order.shipping_pickup_type == 'ship' %}
                     <div class="divider"></div>
                     <h3>Datos de envío</h3>
                     <p style="font-size:14px;color:#7A5560;line-height:180%;">
@@ -288,13 +239,11 @@
                       {% if order.shipping_locality %}{{order.shipping_locality}}, {% endif %}{{order.shipping_city}} ({{order.shipping_zipcode}})<br>
                       {{order.shipping_province}}, {{order.shipping_country}}
                     </p>
+                    <p style="font-size:14px;color:#3A1A1F;">Te avisamos cuando tu pedido esté en camino.</p>
                   {% elseif order.shipping_pickup_type == 'pickup' and order.shipping_extra.store_branch %}
                     <div class="divider"></div>
                     <h3>Retiro en</h3>
                     <p style="font-size:14px;color:#7A5560;">{{ order.shipping_extra.store_branch.name }} — {{ order.shipping_extra.store_branch.extra }}</p>
-                  {% elseif order.shipping_option %}
-                    <div class="divider"></div>
-                    <p style="font-size:14px;color:#7A5560;">{{ order.shipping_option }}</p>
                   {% endif %}
 
                   <div class="divider"></div>

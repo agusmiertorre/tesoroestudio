@@ -606,7 +606,8 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   .nav__links,.nav__cta .btn--ghost,.nav__cta .btn{display:none}
   .burger{display:flex}
   .mm-cta .btn{font-size:.9rem;padding:.55rem 1.1rem}
-  .hero__cta .btn{flex:1;min-width:0;justify-content:center;text-align:center}
+  .hero__cta{flex-direction:column;gap:.7rem}
+  .hero__cta .btn{width:100%;justify-content:center;text-align:center}
   .split,.escolar-hero,.contact,.access__card{grid-template-columns:1fr}
   .split--reverse .split__media{order:0}
   .split__media img{aspect-ratio:16/11}
