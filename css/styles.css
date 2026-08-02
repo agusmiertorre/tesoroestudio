@@ -492,6 +492,8 @@ body.menu-open .mobile-menu{transform:translateY(0);visibility:visible}
   transition:border-color .3s var(--ease),background .3s var(--ease)}
 .footer__social a:hover{border-color:var(--accent);background:rgba(143,204,224,.14)}
 .footer__social svg{width:18px;height:18px}
+.footer__ig-handle{font-size:.9rem;color:#9BBFCC;transition:color .3s var(--ease)}
+.footer__ig-handle:hover{color:#fff}
 .footer__col{display:flex;flex-direction:column;gap:.55rem}
 .footer__label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--accent);font-weight:700;margin:0 0 .5rem}
