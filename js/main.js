@@ -210,7 +210,7 @@
       e.preventDefault();
       const code = (input.value || "").trim().toUpperCase();
       if (!code) { input.focus(); return; }
-      window.location.href = "descargas.html?code=" + encodeURIComponent(code);
+      window.open("descargas.html?code=" + encodeURIComponent(code), "_blank", "noopener");
     });
   }
 

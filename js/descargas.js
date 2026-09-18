@@ -130,7 +130,7 @@
           setMsg("No encontramos un álbum con ese código. Revisalo e intentá de nuevo.", "error");
           return;
         }
-        window.open(album.driveUrl, "_blank", "noopener");
+        window.location.href = album.driveUrl;
       })
       .catch((err) => {
         console.error(err);
