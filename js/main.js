@@ -188,16 +188,28 @@
 
   /* ---------------- código de acceso (teaser → página de descargas) ------- */
   function initTeaserCode() {
-    const form = $("#accessTeaser");
+    const form  = $("#accessTeaser");
+    const input = $("#teaserCode");
     if (!form) return;
+
+    // Mayúsculas + formato automático XXXX-XXXX.
+    input.addEventListener("input", () => {
+      const cursor       = input.selectionStart;
+      const beforeHyphen = input.value.slice(0, cursor).replace(/-/g, "").length;
+      const raw          = input.value.toUpperCase().replace(/-/g, "").slice(0, 8);
+      const formatted    = raw.length > 4 ? raw.slice(0, 4) + "-" + raw.slice(4) : raw;
+      input.value = formatted;
+      const newCursor = Math.min(
+        beforeHyphen <= 4 ? beforeHyphen : beforeHyphen + 1,
+        formatted.length
+      );
+      input.setSelectionRange(newCursor, newCursor);
+    });
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const input = $("#teaserCode");
       const code = (input.value || "").trim().toUpperCase();
-      if (!code) {
-        input.focus();
-        return;
-      }
+      if (!code) { input.focus(); return; }
       window.location.href = "descargas.html?code=" + encodeURIComponent(code);
     });
   }
