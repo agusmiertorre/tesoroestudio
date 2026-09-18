@@ -85,12 +85,20 @@
     const input = $("#codeInput");
     if (!form) return;
 
-    // Forzamos mayúsculas mientras escribe.
+    // Mayúsculas + formato automático XXXX-XXXX.
+    // Strips hyphens del input, inserta uno automáticamente tras el 4.º carácter.
     input.addEventListener("input", () => {
-      const pos = input.selectionStart;
-      input.value = input.value.toUpperCase();
-      input.setSelectionRange(pos, pos);
-      setMsg(""); // limpia mensajes de error al corregir
+      const cursor      = input.selectionStart;
+      const beforeHyphen = input.value.slice(0, cursor).replace(/-/g, "").length;
+      const raw         = input.value.toUpperCase().replace(/-/g, "").slice(0, 8);
+      const formatted   = raw.length > 4 ? raw.slice(0, 4) + "-" + raw.slice(4) : raw;
+      input.value = formatted;
+      const newCursor = Math.min(
+        beforeHyphen <= 4 ? beforeHyphen : beforeHyphen + 1,
+        formatted.length
+      );
+      input.setSelectionRange(newCursor, newCursor);
+      setMsg("");
     });
 
     form.addEventListener("submit", (e) => {
@@ -122,7 +130,7 @@
           setMsg("No encontramos un álbum con ese código. Revisalo e intentá de nuevo.", "error");
           return;
         }
-        window.location.href = album.driveUrl;
+        window.open(album.driveUrl, "_blank", "noopener");
       })
       .catch((err) => {
         console.error(err);
